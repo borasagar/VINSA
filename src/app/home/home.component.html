@@ -1,0 +1,116 @@
+<!-- <p>home works!</p> -->
+
+<header class="sticky-top">
+    <input type ="checkbox" name ="" id ="chk1">
+    <div class="logo">
+        <!-- <h1>Web Master</h1> -->
+        <img src="./assets/Images/New Logo.png" style="width:200px">
+    </div>
+        <div class="search-box">
+            <form #searchForm="ngForm" (ngSubmit)="searchSubmit(searchForm.value)">
+                <input type ="text" ngModel name ="search"  id ="srch" placeholder="Search By Brand Or Fueltype">
+                <button type ="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <ul>
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="/login2">Login</a></li>
+            <li><a routerLink="/register1">Register</a></li>
+            <!-- <li><a routerLink="/bikes-list">Bikes</a></li>
+            <li><a routerLink="/cars-list">Cars</a></li>
+            <li><a routerLink="">Logout</a></li> -->
+            <!-- <li>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                  
+            </li> -->
+        </ul>
+        <div class="menu">
+            <label for="chk1">
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+</header>
+
+
+<div style="margin-top:100px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="./assets/Images/Carousol/carousol1.webp" style="height:600px"
+                alt="no img" width="100%">
+            </div>
+
+            
+
+            <div class="item">
+                <img src="./assets/Images/Carousol/carousol2.webp" style="height:600px"
+                    alt="not found" width="100%">
+            </div>
+
+            <div class="item">
+                <img src="./assets/Images/Carousol/corousol.webp" style="height:600px"
+                    alt="pet" width="100%">
+            </div>
+
+            <div class="item">
+                <img src="./assets/Images/Carousol/carousol3.jpeg" style="height:600px"
+                alt="pet" width="100%">
+            </div>
+        </div><br/><br/>
+        
+        
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" title="prev"></span>
+        </a> <a class="right carousel-control" href="#myCarousel"
+            data-slide="next"> <span
+            class="glyphicon glyphicon-chevron-right" title="next"></span>
+        </a>
+    </div>
+    <h1 style="text-align: center;font-size: 25px;"><b>DISCOVER OUR</b></h1>
+        <h1 style="text-align: center;font-size: 90px;"><b>RANGE</b></h1>
+
+    <div>
+        <video autoplay loop muted plays-inline class="back-video" width="1480px">
+            <source src="./assets/Images/Carousol/gif video.mp4" type="video/mp4" >
+        
+          </video>
+    </div>
+    <br/><br/>
+
+
+
+    <div style="margin-left: 50px;">
+        <h1 style="text-align:center"><b>Cars List</b></h1>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let car of cars" >
+                <a (click)="alertmsg()"><img src="{{car.image}}" alt="Card image cap" style="width:400px;margin:7px;height:300px" class="card-img-top"></a>
+                <h2 style="text-align:center">{{car.name}}</h2><br/><br/>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <br/>
+    <br/>
+    <div style="margin-left: 50px;">
+        <h1 style="text-align:center"><b>Bikes List</b></h1>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let bike of bikes" >
+                <a (click)="alertmsg()"><img src="{{bike.image}}" alt="Card image cap" style="width:400px;margin:7px;height:300px" class="card-img-top"></a>
+                <h2 style="text-align:center">{{bike.name}}</h2><br/><br/>
+            </div>
+        </div>
+    </div>
+
+</div>
+

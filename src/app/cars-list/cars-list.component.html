@@ -1,0 +1,246 @@
+<!-- <p>cars-list works!</p> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+    <div class="container-fluid">
+      <img src="./assets/Images/New Logo.png" style="height:40px;width:140px">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <!-- <form class="d-flex" style="margin-left: 150px">
+          <input class="form-control me-sm-2" type="text" placeholder="Search" style="width: 500px">
+          <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+        <ul class="navbar-nav me-auto" >
+          <li class="nav-item" style="margin-left: 820px;">
+            <a class="nav-link active" ><h4>Home</h4>
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item" style="margin-left: 40px;">
+            <a class="nav-link" routerLink="/login2"><h4>Login</h4></a>
+          </li>
+          <li class="nav-item" style="margin-left: 40px;">
+            <a class="nav-link" routerLink="/register1"><h4>Registration</h4></a>
+          </li>
+          <li class="nav-item" style="margin-left: 40px;">
+            <!-- <a class="nav-link" routerLink="/cart"><h4>My Cart</h4></a> -->
+            <!-- <button type ="submit" ><i class="fa fa-shopping-cart" aria-hidden="true" style="width:45px;height:45px"></i></button> -->
+            <button class="btn btn-black" routerLink="/cart"><img src="./assets/Images/cart.png" style="width:45px">
+            <span class="badge badge-info">{{carts.length}}</span>
+            </button>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="showemp">Show Employees</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="product">Show Products</a>
+          </li> -->
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li> -->
+        </ul>
+        <form >
+          <button class="btn btn-danger my-2 my-sm-0 btn-lg" type="submit">
+            <a class="nav-link" href="">Logout</a></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<!-- <input type="submit" value="Go Back" class="btn btn-primary" routerLink="/user-choice" style="width:200px;height:50px;margin-top: 50px;margin-left:70px;font-size: 20px;"> -->
+<!-- <app-header></app-header> -->
+<div style="background-color: rgb(243, 243, 244);margin-top:-20px;">
+<div class="container">
+  <a routerLink="/user-choice"><img src="/assets/go back.png" style="width:160px;margin-left:120px;margin-top: 50px;height:80px"></a>
+  <!-- <input type="submit" value="Go Back" class="btn btn-primary" routerLink="/user-choice" style="width:200px;height:50px;margin-top: 50px;margin-left:90px;font-size: 20px;"> -->
+
+  
+
+<!-- <h2> Cars List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Name </th>
+            <th> FuelType </th>
+            <th> Price </th>
+            <th> Description </th>
+            <th> Rating </th>
+            <th> image </th>
+            <th> Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let car of cars" >
+            <td> {{ car.id }} </td>
+            <td> {{ car.name }} </td>
+            <td> {{ car.fueltype }} </td>
+            <td> {{ car.price }} </td>
+            <td> {{ car.description }} </td>
+            <td> {{ car.rating }} </td>
+            <td> <img src="{{ car.image }}" style="width:200px;height:100px;border-radius:20px"></td>
+            <td> <button class="btn btn-primary" type="button" (click)="goToCart(car)">Add to Cart</button></td>
+            <td>
+                <button (click) = "updateEmployee(car.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(car.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(car.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+
+<!-- --------------------------------------------------------------------------------------------------- -->
+
+
+        <!-- <div class="row">
+            <div *ngFor="let car of cars" class="card" style="width:300px;margin:10px;">
+                    <div class="card-body">
+                        <img src="{{car.image}}" style="height: 200px;width: 200px">
+                        <p>Product_Id: {{car.id}}</p>
+                        <p>Product_Name: {{car.name}}</p>
+                        <p>FuelType: {{car.fueltype</p>
+                        <p>Description: {{car.description}}</p>
+                        <p>Rating: {{car.rating}}</p>
+                        <p>Price: {{car.price}}</p>
+                    </div>
+            </div>
+        </div> -->
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+
+         <!-- <div class="row">
+    <ng-container *ngFor="let car of cars">
+        <div class="card" style="width:250px;margin: 10px;">
+            <table style="display:flex;" style="width:250px;margin: 10px;">
+                <tr>
+                    <div class="product">
+                        <img src="{{car.image}}" style="width: 150px;height: 150px;margin-left:40px" class="card-img-left"
+                            alt="Car Image" >
+                        <div class="card-body">
+                            <table>
+                                <tr>
+                                    <th>ID</th>
+                                    <td>: {{car.id}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>: {{car.name}}</td>
+                                </tr>
+                                <tr>
+                                    <th>FuelType</th>
+                                    <td>: {{car.fueltype}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td>: {{car.description}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Rating</th>
+                                    <td>: {{car.rating}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Price</th>
+                                    <td>: {{car.price}}</td>
+                                </tr>
+
+                                
+
+                            </table>
+                            <button class="btn btn-primary" type="button"
+                                style="font-size: 18px;width: 200px; height: 30px;margin-right:20px;" routerLink="/cart" (click)="goToCart(car)">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                </tr>
+            </table>
+        </div>
+    </ng-container>
+</div> -->
+
+
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+<div class="container">
+<div class="row container">
+<div class="card" *ngFor="let car of cars" style="width:300px;margin: 30px;margin-left:70px">
+    <div class="card-body">
+        <img src="{{car.image}}" class="card-img-top" alt="Fissure in Sandstone"  style="height:180px">    
+             <p class="card-title" style="text-align: center;"><b><h3>{{car.name}}</h3></b></p>
+                    <div style="font-size:15px">
+                        <p>FuelType: {{car.fueltype}}</p>
+                        <p>Description: {{car.description}}</p>
+                        <!-- <p>Rating: {{car.rating}}</p> -->
+                        <p>Price: {{car.price | currency : 'INR'}}</p>
+                    </div>
+      <p style="text-align: center;"><a class="btn btn-primary btn-lg btn-block" (click)="goToCart(car)">Add To Cart</a></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- --------------------------------------------------------------------------------------------- -->
+
+<!-- <div class="row">
+<div class="card" *ngFor="let car of cars" style="width:250px;margin: 10px"> 
+    <img class="card-img-top" src="{{car.image}}" alt="Card image cap">    
+    <div class="card-body">
+      <h3 class="card-title">{{car.name}}</h3>
+      <div style="font-size:15px">
+        <p>FuelType: {{car.fueltype}}</p>
+        <p>Description: {{car.description}}</p>
+        <p>Rating: {{car.rating}}</p>
+        <p>Price: {{car.price | currency : 'INR'}}</p>
+    </div>
+      <a class="btn btn-primary btn-lg btn-block" routerLink="/cart" (click)="goToCart(car)">Add To Cart</a>
+    </div>
+  </div>
+</div> -->
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+
+<!-- <div class="card" *ngFor="let car of cars" style="width:250px;margin: 10px">
+    <img class="card-img-top" src="{{car.image}}" alt="Card image cap">
+    <div class="card-body">
+        <p class="card-title" style="text-align: center;"><b><h3>{{car.name}}</h3></b></p>
+      <div style="font-size:15px">
+        <p>FuelType: {{car.fueltype}}</p>
+        <p>Description: {{car.description}}</p>
+        <p>Rating: {{car.rating}}</p>
+        <p>Price: {{car.price | currency : 'INR'}}</p>
+    </div>
+      <a class="btn btn-primary btn-lg btn-block" routerLink="/cart" (click)="goToCart(car)">Add To Cart</a>
+    </div>
+  </div> -->
+
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+
+  <!-- <h3 ><u>List Of Products</u></h3> <br />
+<div class="container">
+    <div class="row md-1" style="margin-top: 4px">
+        <div class="col-md-3" *ngFor="let product of cars">
+            <div class="card" style="width:250px; height: 85%;"> <img style="width:100%; height: 50%;"
+                    class="card-img-top" src="{{product.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text" ><b>{{product.name}}</b></p>
+                    <p class="card-text">{{product.description}}</p>
+                    <p class="card-text">{{product.fueltype}}</p>
+                    <p class="card-text" >{{product.price}}₹</p>
+               </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+</div>
+</div>

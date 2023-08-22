@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://www.nexaexperience.com/slider_html_code/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Slider Project </title>
+<link href="./bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="./style.css" rel="stylesheet" type="text/css">
+<link href="./responsive.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./css2" rel="stylesheet">
+
+<script>
+document.createElement("article");
+document.createElement("aside");
+document.createElement("audio");
+document.createElement("canvas");
+document.createElement("command");
+document.createElement("datalist");
+document.createElement("details");
+document.createElement("embed");
+document.createElement("figcaption");
+document.createElement("figure");
+document.createElement("footer");
+document.createElement("header");
+document.createElement("hgroup");
+document.createElement("keygen");
+document.createElement("mark");
+document.createElement("meter");
+document.createElement("nav");
+document.createElement("output");
+document.createElement("progress");
+document.createElement("rp");
+document.createElement("rt");
+document.createElement("ruby");
+document.createElement("section");
+document.createElement("source");
+document.createElement("summary");
+document.createElement("time");
+document.createElement("video");
+</script>
+</head>
+<body>
+<div id="wrapper">
+    <div class="video-block" id="video-block-div">
+    <video id="myvideo" autoplay="" muted="" playsinline="true" loop="" preload="auto">
+    <source src="images/Desktop.mp4" type="video/mp4">
+    <source src="images/Desktop.mp4" type="video/ogg"> 
+</video>
+    </div>
+    <div class="content-part">
+      <div id="fade-text-box" class="text-box fade-in" style="display: block;">
+        <span class="explore"></span>
+        <h4 id="bannerHeading">17” Precision Cut Alloy Wheels</h4>
+        <!-- <p id="bannerDescription">The aesthetically crafted Crown Jewel LED headlamps with Heartbeat DRLs give the car a sleek look and a distinctive character. </p>-->
+        
+      </div>
+      <div class="container">
+      
+
+      <div id="carousel-example-generic" class="carousel slide slide-list" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" id="carousel_1" data-number="0" data-slide-to="0" class="selected" onclick="jumpVideo(1, this, true)"><span id="carouselSpan-1">Bold &amp; Expressive Front Fascia</span></li>
+          <li data-target="#carousel-example-generic" id="carousel_2" data-number="1" data-slide-to="1" onclick="jumpVideo(2, this, true)" class="selected active"><span id="carouselSpan-2">17” Precision Cut Alloy Wheels</span></li>
+          <li data-target="#carousel-example-generic" id="carousel_3" data-number="3.9" data-slide-to="2" onclick="jumpVideo(3, this, true)" class=""><span id="carouselSpan-3">Ventilated Front Seats</span></li>
+          <!-- <li data-target="#carousel-example-generic" id="carousel_4" data-number="5" data-slide-to="3" onclick="jumpVideo(4, this, true)"><span id="carouselSpan-4">Rear Seat Recline</span></li> -->
+          <li data-target="#carousel-example-generic" id="carousel_4" data-number="6" data-slide-to="3" onclick="jumpVideo(4, this, true)" class=""><span id="carouselSpan-4">Digital Multi-Information Display</span></li>
+          <li data-target="#carousel-example-generic" id="carousel_5" data-number="9" data-slide-to="4" onclick="jumpVideo(5, this, true)" class=""><span id="carouselSpan-5">Head Up Display</span></li>
+          <li data-target="#carousel-example-generic" id="carousel_6" data-number="11" data-slide-to="5" onclick="jumpVideo(6, this, true)" class=""><span id="carouselSpan-6">Smartplay Pro+</span></li>
+          <li data-target="#carousel-example-generic" id="carousel_7" data-number="13.7" data-slide-to="6" onclick="jumpVideo(7, this, true)" class=""><span id="carouselSpan-7">Wireless Charger</span></li>
+          <li data-target="#carousel-example-generic" id="carousel_8" data-number="15" data-slide-to="7" onclick="jumpVideo(8, this, true)" class=""><span id="carouselSpan-8">All Black Interior with Champagne Gold Accents</span></li>
+          <li data-target="#carousel-example-generic" id="carousel_9" data-number="17" data-slide-to="8" onclick="jumpVideo(9, this, true)" class=""><span id="carouselSpan-9">Panoramic Sunroof</span></li>
+          <li data-target="#carousel-example-generic" id="carousel_10" data-number="19.5" data-slide-to="9" onclick="jumpVideo(10, this, true)" class=""><span id="carouselSpan-10">LED Stop Lamp</span></li>
+        </ol>
+
+          <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item"></div>
+            <div class="item active"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <!-- <div class="item"></div> -->
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+
+<script src="./jquery.min.js(1).download"></script>
+<script src="./bootstrap.min.js.download"></script>
+<script>
+var totalSlideCount=10,myvideo=document.getElementById("myvideo"),manualTriggered=!1,intervalId=0,desktopVideoSource="images/Desktop.mp4",mobileVideoSource="images/Mobile.mp4",currentTime=0;function jumpVideo(e,o,t){for(currentTime=myvideo.currentTime,t&&($("#carousel-example-generic").carousel("pause"),manualTriggered=!0,setTimeout((function(){manualTriggered=!1}),2e3)),$("#fade-text-box").hide(),changeDescription(e),$("#fade-text-box").fadeIn(),e==totalSlideCount+1&&(e=1,myvideo.currentTime=0),i=1;i<=e;i++)$(`#carousel_${i}`).addClass("selected");for(i=e;i<=totalSlideCount;i++)$(`#carousel_${i}`).removeClass("selected");$(`#carousel_${e}`).addClass("selected");var a=$(`#carousel_${e}`).attr("data-number"),d=Number(a);stopInterval(),t&&(myvideo.currentTime,myvideo.currentTime=3==e?d-2:d-1),myvideo&&d&&(myvideo.playbackRate=2,myvideo.play(),startInterval(d,e))}function startInterval(e,i){intervalId=setInterval((function(){$(`#carousel_${i}`).attr("data-number");myvideo.currentTime>=e&&myvideo.pause()}),100)}function stopInterval(){intervalId&&clearInterval(intervalId)}function changeDescription(e){switch(e){case 1:$("#bannerHeading").text($(`#carouselSpan-${e}`).text());break;case 2:case 3:case 4:case 5:case 6:case 7:case 8:case 9:case 10:$("#bannerHeading").text($(`#carouselSpan-${e}`).html());break;default:$("#bannerHeading").text($("#carouselSpan-1").text())}}$("document").ready((function(){screen.availWidth>500?($("#video-block-div video source").attr("src",desktopVideoSource),$("#video-block-div video")[0].load(),myvideo.pause(),$("#carousel_1").addClass("selected")):($("#video-block-div video source").attr("src",mobileVideoSource),$("#video-block-div video")[0].load(),myvideo.pause(),$("#carousel_1").addClass("selected")),window.matchMedia("(orientation: portrait)").addListener((function(e){e.matches?($("#video-block-div video source").attr("src",mobileVideoSource),$("#video-block-div video")[0].load(),(myvideo=document.getElementById("myvideo")).currentTime=currentTime):($("#video-block-div video source").attr("src",desktopVideoSource),myvideo.currentTime=currentTime,$("#video-block-div video")[0].load(),(myvideo=document.getElementById("myvideo")).currentTime=currentTime)})),setInterval((function(){currentTime=myvideo.currentTime}),500),myvideo&&(myvideo.playbackRate=2),$("#carousel-example-generic").bind("slide.bs.carousel",(function(e){var i=$("li.active").index()+1;manualTriggered||jumpVideo(i+1,this,!1)})),setTimeout((function(){myvideo.pause()}),800)}));
+</script>
+
+</body></html>

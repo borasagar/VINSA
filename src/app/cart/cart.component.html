@@ -1,0 +1,115 @@
+<!-- <p>cart works!</p> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+    <div class="container-fluid">
+      <img src="./assets/Images/New Logo.png" style="height:40px;width:140px">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <!-- <form class="d-flex" style="margin-left: 150px">
+          <input class="form-control me-sm-2" type="text" placeholder="Search" style="width: 500px">
+          <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+        <ul class="navbar-nav me-auto" >
+          <li class="nav-item" style="margin-left: 820px;">
+            <a class="nav-link active" ><h4>Home</h4>
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item" style="margin-left: 40px;">
+            <a class="nav-link" routerLink="/login2"><h4>Login</h4></a>
+          </li>
+          <li class="nav-item" style="margin-left: 40px;">
+            <a class="nav-link" routerLink="/register1"><h4>Registration</h4></a>
+          </li>
+          <li class="nav-item" style="margin-left: 40px;">
+            <!-- <a class="nav-link" routerLink="/cart"><h4>My Cart</h4></a> -->
+            <!-- <button type ="submit" ><i class="fa fa-shopping-cart" aria-hidden="true" style="width:45px;height:45px"></i></button> -->
+            <button class="btn btn-black"><img src="./assets/Images/cart.png" style="width:45px">
+            <span class="badge badge-info" >{{carts.length}}</span>
+            </button>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="showemp">Show Employees</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="product">Show Products</a>
+          </li> -->
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li> -->
+        </ul>
+        <form >
+          <button class="btn btn-danger my-2 my-sm-0 btn-lg" type="submit">
+            <a class="nav-link" href="">Logout</a></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<div class="empty" *ngIf="carts.length<1">
+<ng-container >
+    <div class="container">
+        <div class="card" style="height: 550px">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+            <h4>Your cart is empty!</h4>
+            <h6>Add item to it now</h6>
+            <button routerLink="/user-choice" class="btn btn-primary">Shop Now</button>
+        </div>
+    </div>
+</ng-container>
+</div>
+
+
+<!-- <h1>Hai</h1>
+<ng-container >
+    <div class="container">
+        <div *ngFor="let cart of carts" class="card">
+            <h5 class="card-title">{{cart.name}}</h5>
+        
+        <div class="center">
+            <img src={{cart.image}} alt="">
+            <h4>{{cart.fueltype}}</h4>
+            <h6>Add item to it now</h6>
+            <button routerLink="/user-choice" class="btn btn-primary">Shop Now</button>
+        </div>
+    </div>
+    </div>
+</ng-container> -->
+
+<div style="background-color: rgb(243, 243, 244);margin-top:-20px;height:100%">
+<div class="empty" *ngIf="carts.length>0" >
+<div class="row container align-items-center">
+    <div class="card" *ngFor="let cart of carts" style="width:250px;margin: 5px;height:380px;margin-left:120px"> 
+        <img class="card-img-top" src="{{cart.image}}" alt="Card image cap">    
+        <div class="card-body">
+        <h3 class="card-title" style="text-align: center">{{cart.name}}</h3>
+            <div style="font-size:15px;" >
+                <p>FuelType: {{cart.fueltype}}</p>
+                <p>Description: {{cart.description}}</p>
+                <!-- <p>Rating: {{cart.rating}}</p> -->
+                <p>Price: {{cart.price | currency : 'INR'}}</p>
+            </div>
+        <a class="btn btn-primary btn-lg btn-block" routerLink="/cart" (click)="deleteProduct(cart.id)">Delete</a>
+        </div>
+  </div>
+</div>
+
+<div class="card mt-5 container" style="height: 90px;margin-left:80px">
+    <h1 style="color: rgb(41, 128, 0)">Total Value: {{total | currency: 'INR'}}
+    <input type="submit" value="Make Payment" class="btn btn-primary btn-lg" routerLink="/payment" style="width:150px;height:40px;margin-left: 800px;"> </h1>
+</div>
+
+</div>
+</div>

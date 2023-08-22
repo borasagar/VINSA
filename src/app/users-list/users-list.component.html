@@ -1,0 +1,44 @@
+<!-- <p>users-list works!</p> -->
+<app-header></app-header>
+
+<div style="background-color: rgb(243, 243, 244);margin-top:-20px;">
+<div class="container">
+    <!-- <input type="submit" value="Go Back" class="btn btn-primary" routerLink="/admin-choice" style="width:200px;height:50px;margin-top: 50px;margin-left:70px;font-size: 20px;"> -->
+    <a routerLink="/admin-choice"><img src="/assets/go back.png" style="width:160px;margin-left:120px;height:80px"></a>
+
+    <br /><br /><br />
+    <!-- <h2> Users List</h2> -->
+    <table class="table table-bordered table-hover table-condensed" style="text-align:center;font-size: 15px;">
+        <thead>
+            <tr style="background-color: darkgreen;color:yellow;">
+                <th> Id </th>
+                <th> FirstName </th>
+                <th> LastName </th>
+                <th> Country </th>
+                <th> State </th>
+                <th> Phone Number </th>
+                <th> Gender </th>
+                <th> Email </th>
+                <!-- <th> Action </th> -->
+            </tr>
+        </thead>
+        <tbody style="background-color: lightgreen;color:rgb(58, 5, 86)">
+            <tr *ngFor="let user of users">
+                <td> {{ user.id }} </td>
+                <td> {{ user.firstName }} </td>
+                <td> {{ user.lastName }} </td>
+                <td> {{ user.country }} </td>
+                <td> {{ user.state }} </td>
+                <td> {{ user.phoneNumber }} </td>
+                <td> {{ user.gender }} </td>
+                <td> {{ user.email }} </td>
+                <!-- <td>
+                <button class = "btn btn-info"> Update</button>
+                <button class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

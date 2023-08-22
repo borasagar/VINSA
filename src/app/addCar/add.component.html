@@ -1,0 +1,60 @@
+<!-- <p>add works!</p> -->
+
+<!-- <input type="submit" value="Go Back" class="btn btn-primary" routerLink="/admin-choice" style="width:200px;height:50px;margin-top: 50px;margin-left:70px;font-size: 20px;"> -->
+<app-header></app-header>
+<div class="container">
+    <a routerLink="/edit"><img src="./assets/GO BACK.jpeg" style="width:120px;margin-left:120px"></a>
+
+<!-- <form #addProduct="ngForm" (ngSubmit)="submitProduct(addProduct.value)">
+    Enter Name : <input type="text" name="name" ngModel required ><br />
+    Enter FuelType : <input type="text" name="fueltype" ngModel required ><br />
+    Enter Price : <input type="text" name="price" ngModel required ><br /> 
+    Enter Description : <input type="text" name="description" ngModel required ><br />
+    Enter Rating : <input type="text" name="rating" ngModel required ><br />
+    Enter ImagePath : <input type="text" name="image" ngModel required ><br />
+
+    <button [disabled]=addProduct.invalid>Register</button>
+</form> -->
+
+<div class="container">
+    <div class="card mt-5" style="align-items: center;">
+        <h1> Product Details </h1>
+    </div>
+    <div class="card mt-5" style="padding:20px">
+        <form #addProduct="ngForm" (ngSubmit)="submitProduct(addProduct.value)">
+            <div class="form-group">
+                <label for="name">Product Name: </label>
+                <input type="text" #name (ngModel)="name" name="name" id="name" class="form-control" placeholder="Enter Product Name" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Product FuelType: </label>
+                <input type="text" #fueltype (ngModel)="fueltype" name="fueltype" id="fueltype" class="form-control" placeholder="Enter Product FuelType">
+            </div>
+            <div class="form-group">
+                <label for="name">Product Price: </label>
+                <input type="text" #price (ngModel)="price" name="price" id="price" class="form-control" placeholder="Enter product Price">
+            </div>
+            <div class="form-group">
+                <label for="name">Product Description: </label>
+                <input type="text" #description (ngModel)="description" name="description" id="description" class="form-control" placeholder="Enter product Description">
+            </div>
+            <!-- <div class="form-group">
+                <label for="name">Product Rating: </label>
+                <input type="text" #rating (ngModel)="rating" name="rating" id="rating" class="form-control" placeholder="Enter product Rating">
+            </div> -->
+            <div class="form-group">
+                <label for="name">Product ImagePath: </label>
+                <input type="text" #image (ngModel)="image" name="image" id="image" class="form-control" placeholder="Enter ImagePath">
+            </div>
+            <div class="form-group">
+                <label for="name">Product Brand: </label>
+                <input type="text" #brand (ngModel)="brand" name="brand" id="brand" class="form-control" placeholder="Enter Brand">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary w-100" [disabled]=addProduct.invalid style="font-size: 15px">
+            </div>
+        </form>
+    </div>
+</div>
+
+</div>

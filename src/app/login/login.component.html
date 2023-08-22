@@ -1,0 +1,44 @@
+<!-- <p>login works!</p> -->
+
+<!-- <app-header></app-header> -->
+<!-- Email : <input type="text" [(ngModel)]="login"><br/>
+Password : <input type="password" [(ngModel)]="password"><br/>
+<button (click)="loginSubmit()">LOGIN</button> -->
+
+<!-- <form #loginForm="ngForm" class="form-group" (ngSubmit)="loginSubmit2(loginForm.value)" novalidate>
+Email : <input type="text" class="form-control" ngModel name="login" #loginId="ngModel" required minlength="4" maxlength="30"><br/>
+Password : <input type="password" class="form-control" ngModel name="password" #password="ngModel" required minlength="4" maxlength="30"><br/>
+<button [disabled]=loginForm.invalid>LOGIN</button>
+</form>
+
+
+<div *ngIf="loginId.errors?.['required'] && loginId.dirty">Please Enter loginId</div>
+<div *ngIf="loginId.errors?.['minlength'] && loginId.touched">Enter Min 6 Characters</div>
+<div *ngIf="password.errors?.['required'] && password.touched">Please Enter password</div>
+<div *ngIf="password.errors?.['minlength'] && password.touched">Enter Min 6 Characters</div> -->
+<!-- <div style="background-color: yellow"> -->
+<div class="vh-100 gradient-custom">
+  <div class="login-page">
+    
+    <div class="form">
+      <div class="header">VINSA</div>
+      <!-- <form class="register-form">
+            <input type="text" placeholder="name"/>
+            <input type="password" placeholder="password"/>
+            <input type="text" placeholder="email address"/>
+            <button>create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form> -->
+      <form #loginForm="ngForm" class="form-group" (ngSubmit)="loginSubmit2(loginForm.value)" novalidate>
+        
+        <input type="text" placeholder="Email" class="form-control" ngModel name="login" #loginId="ngModel" required
+          minlength="3" maxlength="30">
+        <input type="password" placeholder="Password" class="form-control" ngModel name="password" #password="ngModel"
+          required minlength="3" maxlength="30">
+        <button [disabled]=loginForm.invalid>login</button>
+        <h4>Not registered?<a routerLink="/register1">Create an account</a></h4>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
